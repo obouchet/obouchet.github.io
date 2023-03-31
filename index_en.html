@@ -545,7 +545,10 @@
                 <div class="contact">
                     <i class="fa fa-phone"></i>
                     <h3>Phone</h3>
-                    <p>+1 (418) 956-2584</p>
+                    <div id="revealPhone">
+                        <button onclick="revealPhone()">Reveal</button>
+                    </div>
+                    <p id="phonenumber"></p>
                 </div>
             </div>
             <!-- /contact -->
@@ -555,7 +558,10 @@
                 <div class="contact">
                     <i class="fa fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>info @ obinfo.ca</p>
+                    <div id="revealEmail">
+                        <button onclick="revealEmail()">Reveal</button>
+                    </div>
+                    <p id="emailaddress"></p>
                 </div>
             </div>
             <!-- /contact -->
@@ -626,9 +632,19 @@
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
 
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    function revealPhone() {
+        document.getElementById("phonenumber").innerHTML = decode("10869547321+ 8914)( 0612435546-528");
+        document.getElementById("revealPhone").style.display = 'none';
+    }
+    function revealEmail() {
+        document.getElementById("emailaddress").innerHTML = decode("8146753209fboinb@ooo102c.a");
+        document.getElementById("revealEmail").style.display = 'none';
+    }
 </script>
 </body>
 
